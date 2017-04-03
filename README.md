@@ -56,7 +56,9 @@ Mean roc_auc scores achieved with Logistic Regression using the reduced feature 
 
 
 rus: 0.775255281542
+
 sm : 0.850182697411
+
 enn: 0.849254695007
 
 
@@ -64,7 +66,9 @@ roc_auc scores achieved with Logistic Regression using the reduced feature set o
 
 
 rus: 0.719288793103
+
 sm : 0.771667008687
+
 enn: 0.771292064811
 
 
@@ -72,7 +76,9 @@ Mean roc_auc scores achieved with the SGDClassifier using the reduced feature se
 
 
 rus: 0.760088436385
+
 sm : 0.764955228716
+
 enn: 0.763685680108
 
 
@@ -80,5 +86,7 @@ roc_auc scores achieved with the SGDClassifier using the reduced feature set on 
 
 
 rus: 0.714361104808
+
 sm : 0.753398525866
+
 enn: 0.760249022231
