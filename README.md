@@ -36,7 +36,9 @@ I used the following feature selection methods to help decide which features are
 5) Stability Selection with Logistic Regression
 
 
-Having performed these different feature selection methods, I decided to try dropping some features in varying combinations. In the end, I left out the "age", "job", and "housing" features due to them being deemed unimportant by almost every feature selection method. I decided to remove "nr_employed" due to its high correlation with "euribor3m" and "emp_var_rate", though I assume that removing one of the other two features instead would have a similar effect. Lastly, I dropped "cons_price_idx" and saw only a slightly decrease of about 1% in the roc_auc scores. Therefore, I decided to leave it out for the sake of having a simpler model. Removing "prev_days" seemed to cause a more significant decrease in roc_auc scores so I left it in my model.
+Having performed these different feature selection methods, I decided to try dropping some features in varying combinations. In the end, I left out the "age", "job", and "housing" features due to them being deemed unimportant by almost every feature selection method. I decided to remove "nr_employed" due to its high correlation with "euribor3m" and "emp_var_rate", though I assume that removing one of the other two features instead would have a similar effect. Lastly, I dropped "cons_price_idx" and saw only a slightly decrease of about 1% in the roc_auc scores. Therefore, I decided to leave it out for the sake of having a simpler model. Removing "prev_days" seemed to cause a more significant decrease in roc_auc scores so I left it in my model. My final feature set includes the following features: 
+
+"marital_status", "education", "credit_default", "loan", "contact", "month", "day_of_week", "campaign", "prev_days", "prev_contacts", "prev_outcomes", "emp_var_rate", "cons_conf_idx", "euribor3m"
 
 
 I chose to avoid using SVM models due to the following reasons:
@@ -49,6 +51,7 @@ I chose to avoid using SVM models due to the following reasons:
 For each Logistic Regression model, I performed one hot encoding on the categorical variables, providing the number of categories that should be in each feature to account for rare categories that may be present in the training set but not in the test set. I used MaxAbsScaler() rather than StandardScaler() due to the sparsity of the encoded arrays.
 
 
+
 Mean roc_auc scores achieved with Logistic Regression using the reduced feature set on each balanced training set:
 
 
@@ -57,7 +60,7 @@ sm : 0.850182697411
 enn: 0.849254695007
 
 
-Mean roc_auc scores achieved with Logistic Regression using the reduced feature set on each balanced test set:
+roc_auc scores achieved with Logistic Regression using the reduced feature set on each balanced test set:
 
 
 rus: 0.719288793103
@@ -68,8 +71,14 @@ enn: 0.771292064811
 Mean roc_auc scores achieved with the SGDClassifier using the reduced feature set on each balanced dataset:
 
 
-rus best score: 0.760088436385
-sm  best score: 0.764955228716
-enn best score: 0.763685680108
+rus: 0.760088436385
+sm : 0.764955228716
+enn: 0.763685680108
 
 
+roc_auc scores achieved with the SGDClassifier using the reduced feature set on each balanced dataset:
+
+
+rus: 0.714361104808
+sm : 0.753398525866
+enn: 0.760249022231
