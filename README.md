@@ -1,4 +1,4 @@
-https://travis-ci.org/wl2522/BankMarketingCampaign.svg?branch=master
+[![Build Status](https://travis-ci.org/wl2522/BankMarketingCampaign.svg?branch=master)](https://travis-ci.org/wl2522/BankMarketingCampaign)
 
 
 Step 0
