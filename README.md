@@ -68,11 +68,11 @@ enn: 0.850619097685
 roc_auc scores achieved with Logistic Regression using the reduced feature set on each balanced test set:
 
 
-rus: 0.719288793103
+rus: 0.71875914477
 
-sm : 0.771667008687
+sm : 0.754171364391
 
-enn: 0.771292064811
+enn: 0.747757122797
 
 
 Mean roc_auc scores achieved with the SGDClassifier using the reduced feature set on each balanced training set:
