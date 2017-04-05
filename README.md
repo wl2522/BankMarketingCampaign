@@ -166,3 +166,6 @@ Step 4
 ------
 
 
+Here, I performed poor man's stacking with an ensemble made up of the previously chosen models and weighted them relative to their roc_auc test scores.
+
+I then tried training an EasyEnsemble AdaBoost classifier and adding it to the ensemble.
