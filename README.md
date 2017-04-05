@@ -5,7 +5,7 @@ Step 0
 ------
 
 
-I experimented with treating the "month", "day_of_week", and "prev_days" features as both continuous and categorical.
+I experimented with treating the "month", "day_of_week", and "prev_days" features as both continuous and categorical. I also converted the "prev_days" feature into a categorical value of whether or not a person was ever called, due to how skewed the distribution was in favor of the value "999".
 I decided to treat all three as continuous variables for the Logistic Regression model that I chose since it provided slightly better performance than when treaing them as categorical features.
 In this step, the data is loaded and the categorical features are encoded as integers in preparation for one hot encoding.
 Lastly, I create three balanced datasets using the following resampling methods:
